@@ -1,0 +1,1 @@
+SELECT *  FROM `biqquery-sandbox.benchmark_temp.pretty_name` WHERE pretty_name IN ("ELLE", "ESPN") LIMIT 10
