@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: biqquery-sandbox
+    schema: dbt_connor
+    database: biqquery-sandbox
+    tables: 
+      - name: workload_test
+  
+  - name: mbk-zeus
+    schema: temp
+    database: mbk-zeus
+    tables: 
+      - name: crm_campaign
