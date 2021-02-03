@@ -5,10 +5,25 @@ sources:
     schema: dbt_connor
     database: biqquery-sandbox
     tables: 
-      - name: workload_test
+      - name: workload
   
   - name: mbk-zeus
     schema: temp
     database: mbk-zeus
     tables: 
       - name: crm_campaign
+
+models:
+    - name: workload
+      columns:
+        - name: campaign_id
+          tests:
+            - not_null
+
+        - name: live_status
+          tests:
+            - accepted_values:
+               values: 
+                - Starting
+                - Live
+                - Ending  
