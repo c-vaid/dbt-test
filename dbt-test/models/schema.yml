@@ -15,12 +15,14 @@ sources:
 
 models:
     - name: workload
+      description: Transformed crm_campaign to allow us to count the number of campiagns live each day
       columns:
         - name: campaign_id
           tests:
             - not_null
 
         - name: live_status
+          description: "{{ doc('status') }}"
           tests:
             - accepted_values:
                values: 
